@@ -278,8 +278,6 @@ strong {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    width: min(1120px, 100% - 2.5rem);
-    margin-inline: auto;
   }
 
   .header__bar {
@@ -898,11 +896,32 @@ strong {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.footer__logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
+
+.footer__inner p {
   font-size: 0.9rem;
   color: var(--text-muted);
+  margin: 0 0 0.35rem;
 }
 
 .footer a {
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.9rem;
 }
