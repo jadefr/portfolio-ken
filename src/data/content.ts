@@ -1,0 +1,81 @@
+/** Coloque sua foto em public/images/profile.jpg (ou altere o caminho abaixo). */
+export const profileImage = '/images/profile.jpg'
+
+export const navLinks = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#experiencia', label: 'Experiência' },
+  { href: '#atuacao', label: 'Atuação' },
+  { href: '#regiao', label: 'Região' },
+] as const
+
+export const heroStats = [
+  { value: '8+', label: 'anos em UTI hospitalar' },
+  { value: '3', label: 'anos em home care' },
+  { value: '1º', label: 'fisioterapeuta cardiovascular na região' },
+] as const
+
+export const timeline = [
+  {
+    period: '8 anos',
+    title: 'Hospital — UTI',
+    highlight: false,
+    description:
+      'Atendimento em terapia intensiva com ênfase em fisioterapia cardiovascular e pulmonar: suporte ventilatório, higiene brônquica, exercícios precoces, prevenção de complicações e preparo para alta hospitalar segura.',
+  },
+  {
+    period: '3 anos',
+    title: 'Home care',
+    highlight: false,
+    description:
+      'Reabilitação domiciliar para pacientes com insuficiência cardíaca, DPOC, pós-operatório cardíaco, sequelas de COVID-19 e outras condições que exigem monitoramento respiratório e funcional contínuo.',
+  },
+  {
+    period: 'Pioneirismo',
+    title: 'Referência regional',
+    highlight: true,
+    description:
+      'Primeiro fisioterapeuta com foco em cardiovascular na Zona da Mata mineira atendida — Além Paraíba, Sapucaia, Aventureiro e Leopoldina — ampliando o acesso a cuidados antes disponíveis apenas em grandes centros.',
+  },
+] as const
+
+export const areas = [
+  {
+    icon: '♥',
+    title: 'Cardiovascular',
+    description:
+      'Reabilitação cardíaca, treinamento aeróbio supervisionado, educação em insuficiência cardíaca e recuperação pós-cirurgia ou evento agudo.',
+  },
+  {
+    icon: '◎',
+    title: 'Pulmonar',
+    description:
+      'Desmame ventilatório, expansão pulmonar, manejo de secreções, otimização da mecânica respiratória e exercícios para DPOC e fibrose.',
+  },
+  {
+    icon: '⌂',
+    title: 'Domiciliar',
+    description:
+      'Planos personalizados no lar, orientação a cuidadores, adaptação do ambiente e continuidade do tratamento após alta da UTI.',
+  },
+  {
+    icon: '+',
+    title: 'UTI',
+    description:
+      'Mobilização precoce, prevenção de fraqueza adquirida na UTI, suporte à extubação e transição segura para unidades de menor complexidade.',
+  },
+] as const
+
+export const cities = [
+  'Além Paraíba',
+  'Sapucaia',
+  'Aventureiro',
+  'Leopoldina',
+] as const
+
+export const contact = {
+  whatsapp: 'https://wa.me/5532999999999',
+  whatsappDisplay: '(32) 99999-9999',
+  email: 'mailto:kennedy.vieira@email.com',
+  emailDisplay: 'kennedy.vieira@email.com',
+  crefito: '000000-F',
+} as const
