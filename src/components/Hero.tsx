@@ -1,6 +1,7 @@
 import { heroStats, profileImage } from '../data/content'
+import type { SyntheticEvent } from 'react'
 
-function HeartIcon() {
+function HeartIcon(): JSX.Element {
   return (
     <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path
@@ -20,7 +21,14 @@ function HeartIcon() {
   )
 }
 
-export function Hero() {
+function handleImgError(e: SyntheticEvent<HTMLImageElement>) {
+  const img = e.currentTarget as HTMLImageElement
+  img.style.display = 'none'
+  const next = img.nextElementSibling as HTMLElement | null
+  next?.classList.add('hero__photo-fallback--visible')
+}
+
+export function Hero(): JSX.Element {
   return (
     <section className="hero">
       <div className="hero__bg" aria-hidden="true" />
@@ -58,10 +66,7 @@ export function Hero() {
                 alt="Kennedy Vieira, fisioterapeuta"
                 width={320}
                 height={320}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                  e.currentTarget.nextElementSibling?.classList.add('hero__photo-fallback--visible')
-                }}
+                onError={handleImgError}
               />
               <div className="hero__photo-fallback" aria-hidden="true">
                 <HeartIcon />

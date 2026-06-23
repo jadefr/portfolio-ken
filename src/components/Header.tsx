@@ -1,7 +1,7 @@
 import { navLinks } from '../data/content'
 import { useNavMenu } from '../hooks/useNavMenu'
 
-export function Header() {
+export function Header(): JSX.Element {
   const { open, toggle, close } = useNavMenu()
 
   return (

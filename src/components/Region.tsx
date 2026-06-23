@@ -1,6 +1,6 @@
 import { cities } from '../data/content'
 
-export function Region() {
+export function Region(): JSX.Element {
   return (
     <section className="section section--alt" id="regiao">
       <div className="container region">

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export function useNavMenu() {
+export function useNavMenu(): { open: boolean; toggle: () => void; close: () => void } {
   const [open, setOpen] = useState(false)
 
   const toggle = useCallback(() => setOpen((prev) => !prev), [])

@@ -1,6 +1,6 @@
 import { contact } from '../data/content'
 
-export function Contact() {
+export function Contact(): JSX.Element {
   return (
     <section className="section cta" id="contato">
       <div className="container cta__inner">

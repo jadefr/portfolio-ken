@@ -1,20 +1,29 @@
 /** Coloque sua foto em public/images/profile.jpg (ou altere o caminho abaixo). */
 export const profileImage = '/images/profile.jpg'
 
-export const navLinks = [
+export type NavLink = { href: string; label: string }
+export const navLinks: NavLink[] = [
   { href: '#sobre', label: 'Sobre' },
   { href: '#experiencia', label: 'Experiência' },
   { href: '#atuacao', label: 'Atuação' },
   { href: '#regiao', label: 'Região' },
-] as const
+]
 
-export const heroStats = [
+export type Stat = { value: string; label: string }
+export const heroStats: Stat[] = [
   { value: '8+', label: 'anos em UTI hospitalar' },
   { value: '3', label: 'anos em home care' },
   { value: '1º', label: 'fisioterapeuta cardiovascular na região' },
-] as const
+]
 
-export const timeline = [
+export type TimelineItem = {
+  period: string
+  title: string
+  highlight: boolean
+  description: string
+}
+
+export const timeline: TimelineItem[] = [
   {
     period: '8 anos',
     title: 'Hospital — UTI',
@@ -38,7 +47,8 @@ export const timeline = [
   },
 ] as const
 
-export const areas = [
+export type Area = { icon: string; title: string; description: string }
+export const areas: Area[] = [
   {
     icon: '♥',
     title: 'Cardiovascular',
@@ -63,19 +73,27 @@ export const areas = [
     description:
       'Mobilização precoce, prevenção de fraqueza adquirida na UTI, suporte à extubação e transição segura para unidades de menor complexidade.',
   },
-] as const
+]
 
-export const cities = [
+export const cities: string[] = [
   'Além Paraíba',
   'Sapucaia',
   'Aventureiro',
   'Leopoldina',
-] as const
+]
 
-export const contact = {
+export type Contact = {
+  whatsapp: string
+  whatsappDisplay: string
+  email: string
+  emailDisplay: string
+  crefito: string
+}
+
+export const contact: Contact = {
   whatsapp: 'https://wa.me/5532999999999',
   whatsappDisplay: '(32) 99999-9999',
   email: 'mailto:kennedy.vieira@email.com',
   emailDisplay: 'kennedy.vieira@email.com',
   crefito: '000000-F',
-} as const
+}
