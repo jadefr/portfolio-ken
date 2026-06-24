@@ -27,7 +27,15 @@ export function Header() {
     <header className={`header${open ? ' header--menu-open' : ''}`} id="topo">
       <div className="header__bar">
         <div className="header__inner">
-          <a className="logo" href="#topo" onClick={close}>
+          <a
+            className="logo"
+            href="#topo"
+            onClick={(e) => {
+              e.preventDefault()
+              close()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
             <img
               src="/kv.png"
               alt="Kennedy Vieira - Fisioterapia"
