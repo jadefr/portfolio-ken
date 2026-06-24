@@ -3,7 +3,15 @@ export function Footer() {
 
   return (
     <footer className="footer">
-      <a href="#topo" className="footer__wide-link" aria-label="Voltar ao topo">
+      <a
+        href="#topo"
+        className="footer__wide-link"
+        aria-label="Voltar ao topo"
+        onClick={(e) => {
+          e.preventDefault()
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }}
+      >
         <img
           src="/KV_escritovermelho.png"
           alt="Kennedy Vieira"
