@@ -87,4 +87,3 @@ export function Header() {
 
 // Close menu when clicking outside the nav or the toggle
 // (keeps behavior intuitive on mobile where backdrop might not cover everything)
-// (no additional exports)
