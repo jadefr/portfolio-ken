@@ -10,9 +10,16 @@ export const navLinks: NavLink[] = [
 ]
 
 export type Stat = { value: string; label: string }
+const currentYear = new Date().getFullYear()
+
+const yearsSince = (startYear: number, plus = false) => {
+  const years = Math.max(1, currentYear - startYear)
+  return plus ? `${years}+` : `${years}`
+}
+
 export const heroStats: Stat[] = [
-  { value: '8+', label: 'anos em UTI hospitalar' },
-  { value: '3', label: 'anos em home care' },
+  { value: yearsSince(2018, true), label: 'anos em UTI hospitalar' },
+  { value: yearsSince(2023), label: 'anos em home care' },
   { value: '1º', label: 'fisioterapeuta cardiovascular na região' },
 ]
 
