@@ -1,7 +1,7 @@
 import { heroStats, profileImage } from '../data/content'
 import type { SyntheticEvent } from 'react'
 
-function HeartIcon(): JSX.Element {
+function HeartIcon() {
   return (
     <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path
@@ -28,7 +28,7 @@ function handleImgError(e: SyntheticEvent<HTMLImageElement>) {
   next?.classList.add('hero__photo-fallback--visible')
 }
 
-export function Hero(): JSX.Element {
+export function Hero() {
   return (
     <section className="hero">
       <div className="hero__bg" aria-hidden="true" />

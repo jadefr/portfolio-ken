@@ -1,4 +1,4 @@
-export function About(): JSX.Element {
+export function About() {
   return (
     <section className="section" id="sobre">
       <div className="container section__split">

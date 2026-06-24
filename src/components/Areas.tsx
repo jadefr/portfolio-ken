@@ -1,6 +1,6 @@
 import { areas } from '../data/content'
 
-export function Areas(): JSX.Element {
+export function Areas() {
   return (
     <section className="section" id="atuacao">
       <div className="container">

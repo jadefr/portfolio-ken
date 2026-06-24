@@ -1,6 +1,6 @@
 import { timeline } from '../data/content'
 
-export function Experience(): JSX.Element {
+export function Experience() {
   return (
     <section className="section section--alt" id="experiencia">
       <div className="container">
