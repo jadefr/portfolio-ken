@@ -1,8 +1,27 @@
 import { navLinks } from '../data/content'
 import { useNavMenu } from '../hooks/useNavMenu'
+import { useEffect } from 'react'
 
 export function Header() {
   const { open, toggle, close } = useNavMenu()
+
+  useEffect(() => {
+    if (!open) return
+    const onDocClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      // if click is inside the nav, the toggle, or the logo, ignore
+      if (
+        target.closest('#menu-principal') ||
+        target.closest('.nav-toggle') ||
+        target.closest('.logo')
+      ) {
+        return
+      }
+      close()
+    }
+    document.addEventListener('mousedown', onDocClick)
+    return () => document.removeEventListener('mousedown', onDocClick)
+  }, [open, close])
 
   return (
     <header className={`header${open ? ' header--menu-open' : ''}`} id="topo">
@@ -65,3 +84,7 @@ export function Header() {
     </header>
   )
 }
+
+// Close menu when clicking outside the nav or the toggle
+// (keeps behavior intuitive on mobile where backdrop might not cover everything)
+// (no additional exports)
