@@ -559,6 +559,10 @@ strong {
   color: var(--text-muted);
 }
 
+.hero__card-note {
+  text-align: center;
+}
+
 /* Sections */
 .section {
   padding: 4rem 0;
@@ -913,6 +917,20 @@ strong {
   flex-shrink: 0;
   border-radius: var(--radius);
   object-fit: contain;
+}
+
+/* Full width footer image */
+.footer__wide-link {
+  display: block;
+  width: 100%;
+}
+
+.footer__wide-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
 }
 
 .footer__inner p {

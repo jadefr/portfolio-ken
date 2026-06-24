@@ -3,18 +3,18 @@ export function Footer() {
 
   return (
     <footer className="footer">
+      <a href="#topo" className="footer__wide-link" aria-label="Voltar ao topo">
+        <img
+          src="/KV_escritovermelho.png"
+          alt="Kennedy Vieira"
+          className="footer__wide-image"
+        />
+      </a>
+
       <div className="container footer__inner">
         <div className="footer__content">
-          <img
-            src="/KV_escritovermelho.png"
-            alt="Kennedy Vieira"
-            className="footer__logo"
-            width={40}
-            height={40}
-          />
           <div>
             <p>&copy; {year} Kennedy Vieira. Todos os direitos reservados.</p>
-            <a href="#topo">Voltar ao topo</a>
           </div>
         </div>
       </div>
