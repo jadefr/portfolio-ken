@@ -32,14 +32,14 @@ export type TimelineItem = {
 
 export const timeline: TimelineItem[] = [
   {
-    period: '8 anos',
+    period: `${yearsSince(2018)} anos`,
     title: 'Hospital — UTI',
     highlight: false,
     description:
       'Atendimento em terapia intensiva com ênfase em fisioterapia cardiovascular e pulmonar: suporte ventilatório, higiene brônquica, exercícios precoces, prevenção de complicações e preparo para alta hospitalar segura.',
   },
   {
-    period: '3 anos',
+    period: `${yearsSince(2023)} anos`,
     title: 'Home care',
     highlight: false,
     description:
