@@ -948,13 +948,8 @@ strong {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin: 0 0 0.35rem;
-  text-align: center;
 }
 
-.footer__copyright {
-  text-align: left;
-  color: var(--text-muted);
-}
 .footer a {
   text-decoration: none;
   font-weight: 500;
@@ -962,9 +957,9 @@ strong {
 }
 
 .footer__copyright {
-  text-align: left;
-  width: auto;
-  margin: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.75rem;
   color: var(--text-muted);
 }
 
