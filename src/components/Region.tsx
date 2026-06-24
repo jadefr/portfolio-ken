@@ -7,7 +7,7 @@ export function Region() {
         <div className="region__map">
           <iframe
             title="Mapa da Zona da Mata - locais de atendimento"
-            src="https://www.google.com/maps?q=Al%C3%A9m%20Para%C3%ADba%2C%20Sapucaia%2C%20Aventureiro%2C%20Leopoldina%2C%20Minas%20Gerais&output=embed"
+            src="https://www.google.com/maps?q=Leopoldina%2C%20Minas%20Gerais&z=10&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}

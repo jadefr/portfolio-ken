@@ -20,15 +20,22 @@ export function Contact() {
           >
             <span className="contact__label">WhatsApp</span>
             <span className="contact__value">{contact.whatsappDisplay}</span>
-            <span className="contact__hint">Atualize com seu número em src/data/content.ts</span>
           </a>
           <a className="contact__item" href={contact.email}>
             <span className="contact__label">E-mail</span>
             <span className="contact__value">{contact.emailDisplay}</span>
-            <span className="contact__hint">Atualize com seu e-mail em src/data/content.ts</span>
+          </a>
+          <a
+            className="contact__item"
+            href={contact.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="contact__label">Instagram</span>
+            <span className="contact__value">{contact.instagramDisplay}</span>
           </a>
           <p className="contact__crefito">
-            Fisioterapeuta — CREFITO-X{' '}
+            Fisioterapeuta — CREFITO{' '}
             <span className="placeholder">{contact.crefito}</span>
           </p>
         </div>

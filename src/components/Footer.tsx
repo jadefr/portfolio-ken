@@ -13,11 +13,13 @@ export function Footer() {
 
       <div className="container footer__inner">
         <div className="footer__content">
-          <div>
-            <p>&copy; {year} Kennedy Vieira. Todos os direitos reservados.</p>
-          </div>
+            <img src="/kv.png" alt="Kennedy Vieira" className="footer__logo" />
+            <div className="footer__copyright">
+              <p>&copy; {year} Kennedy Vieira. Todos os direitos reservados.</p>
+            </div>
         </div>
       </div>
+
     </footer>
   )
 }

@@ -35,14 +35,17 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--text);
-  background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
 
-img,
-svg {
-  display: block;
+.logo__image {
+  height: 48px;
+  width: auto;
   max-width: 100%;
+  border-radius: var(--radius);
+  flex-shrink: 0;
+  display: block;
+  margin: 1rem 0 0 0.5rem; /* top and left spacing */
 }
 
 a {
@@ -153,31 +156,20 @@ strong {
   border-bottom-color: var(--border);
 }
 
-.header__inner {
+.footer__inner {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.75rem;
-  width: min(1120px, 100% - 2.5rem);
-  margin-inline: auto;
-  min-height: var(--header-h);
+  align-items: center;
+  gap: 1rem;
 }
 
-.logo {
+.footer__content {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  min-width: 0;
+  gap: 1rem;
   flex: 1;
-  text-decoration: none;
-  color: inherit;
-}
-
-.logo__image {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius);
-  flex-shrink: 0;
+  min-width: 0;
 }
 
 .nav-toggle {
@@ -299,6 +291,17 @@ strong {
   .nav-toggle,
   .nav-backdrop {
     display: none !important;
+  }
+
+  /* Contact copyright */
+  .contact__copyright {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .contact__copyright p {
+    margin: 0;
+    color: #dfb5bb;
+    font-size: 0.95rem;
   }
 
   .nav {
@@ -927,20 +930,46 @@ strong {
 
 .footer__wide-image {
   display: block;
-  width: 100%;
-  height: auto;
-  max-height: 240px;
-  object-fit: cover;
+  height: 120px;
+  width: auto;
+  max-width: 800px;
+  object-fit: contain; /* show entire image without cropping */
+  margin: 0.5rem auto;
+}
+
+@media (max-width: 767px) {
+  .footer__wide-image {
+    height: 120px;
+    max-width: 90%;
+  }
 }
 
 .footer__inner p {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin: 0 0 0.35rem;
+  text-align: center;
 }
 
+.footer__copyright {
+  text-align: left;
+  color: var(--text-muted);
+}
 .footer a {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
+}
+
+.footer__copyright {
+  text-align: left;
+  width: auto;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.contact__copyright {
+  text-align: center;
+  margin-top: 1.25rem;
+  color: var(--text-muted);
 }

@@ -73,7 +73,7 @@ export function Hero() {
                 <HeartIcon />
               </div>
             </div>
-            <p>Respiração, circulação e reabilitação com base em evidências.</p>
+            <p className="hero__card-note">Respiração, circulação e reabilitação com base em evidências.</p>
           </div>
         </div>
       </div>

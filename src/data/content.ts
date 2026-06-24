@@ -43,7 +43,7 @@ export const timeline: TimelineItem[] = [
     title: 'Referência regional',
     highlight: true,
     description:
-      'Primeiro fisioterapeuta com foco em cardiovascular na Zona da Mata mineira atendida — Além Paraíba, Sapucaia, Aventureiro e Leopoldina — ampliando o acesso a cuidados antes disponíveis apenas em grandes centros.',
+      'Primeiro fisioterapeuta com foco em cardiovascular na Zona da Mata mineira — Além Paraíba, Sapucaia, Aventureiro e Leopoldina — ampliando o acesso a cuidados antes disponíveis apenas em grandes centros.',
   },
 ] as const
 
@@ -88,12 +88,16 @@ export type Contact = {
   email: string
   emailDisplay: string
   crefito: string
+  instagram?: string
+  instagramDisplay?: string
 }
 
 export const contact: Contact = {
-  whatsapp: 'https://wa.me/5532999999999',
-  whatsappDisplay: '(32) 99999-9999',
-  email: 'mailto:kennedy.vieira@email.com',
-  emailDisplay: 'kennedy.vieira@email.com',
-  crefito: '000000-F',
+  whatsapp: 'https://wa.me/5532998428789',
+  whatsappDisplay: '(32) 99842-8789',
+  email: 'mailto:drkennedyvieira@gmail.com',
+  emailDisplay: 'drkennedyvieira@gmail.com',
+  crefito: '299218-F',
+  instagram: 'https://www.instagram.com/dr.kennedyvieira/',
+  instagramDisplay: '@dr.kennedyvieira',
 }

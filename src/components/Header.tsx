@@ -10,11 +10,9 @@ export function Header() {
         <div className="header__inner">
           <a className="logo" href="#topo" onClick={close}>
             <img
-              src="/images/KV.png"
+              src="/kv.png"
               alt="Kennedy Vieira - Fisioterapia"
               className="logo__image"
-              width={48}
-              height={48}
             />
           </a>
           <button
