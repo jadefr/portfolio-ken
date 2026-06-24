@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kennedyvieira.com.br/sitemap.xml
