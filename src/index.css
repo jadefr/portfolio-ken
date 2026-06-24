@@ -82,6 +82,27 @@ h3 {
   margin: 0 0 0.5rem;
 }
 
+  /* Keep logo compact so menu button stays on the right */
+  .logo {
+    flex: 0 0 auto;
+  }
+
+  /* Center dropdown text */
+  .nav__list {
+    gap: 0.625rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav__list a {
+    text-align: center;
+  }
+
+  /* Align CTA button to the right inside the dropdown */
+  .nav__cta {
+    align-self: flex-end;
+  }
+
 p {
   margin: 0 0 1rem;
 }
@@ -343,6 +364,12 @@ strong {
     padding-block: 1rem;
   }
 
+  /* ensure header inner is positioned so we can absolutely place the toggle */
+  .header__inner {
+    position: relative;
+    padding-inline: 1rem;
+  }
+
   .logo__text strong {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -354,19 +381,22 @@ strong {
   }
 
   .nav-backdrop {
-    top: 0;
-    inset: 0;
+    top: var(--header-h);
+    inset: var(--header-h) 0 0;
   }
 
   .nav--open {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    inset: 0;
+    /* appear below the header instead of covering the whole page */
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
     z-index: 201;
-    min-height: 100dvh;
+    max-height: calc(100vh - var(--header-h));
     background: var(--bg);
-    padding: calc(var(--header-h) + 1.25rem) 1.5rem max(2.5rem, env(safe-area-inset-bottom, 0px));
+    padding: 1.25rem 1.5rem max(2.5rem, env(safe-area-inset-bottom, 0px));
     overflow-y: auto;
     border-top: none;
     box-shadow: none;
@@ -375,6 +405,31 @@ strong {
   .nav__list {
     flex: 1;
     gap: 0.625rem;
+  }
+
+  /* center menu item text on mobile */
+  .nav__list a {
+    text-align: center;
+  }
+
+  /* keep CTA button aligned to the right on mobile */
+  .nav__cta {
+    align-self: flex-end;
+    width: auto;
+    padding: 0.85rem 1.25rem;
+  }
+
+  /* position the menu toggle at the right side on mobile so it doesn't overlap the logo */
+  .nav-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 205;
+  }
+
+  .logo {
+    margin-left: 0;
   }
 
   .nav__list a {
